@@ -5,23 +5,21 @@ import random
 # Get user input for their name
 name = input(' - To begin, what is your name? - \n')
 
-
 ROCK = 1
 PAPER = 2
 SCISSORS = 3
-SCORES = 4
-
 
 
 # Main loop
 def main():
+
     try:
 
         # Get player input
         pchoice = getinput()
 
         # Run through loop unless player choice is q to quit
-        while (pchoice.lower() != 'q'):
+        while (pchoice != 'q'):
 
         # Get computer choice   
             cchoice = getcinput()
@@ -46,7 +44,6 @@ def main():
 # Get player input
 def getinput():
 
-
     while True:
 
         print('')
@@ -54,7 +51,6 @@ def getinput():
         print(' -- Choose 1 as ROCK --')
         print(' -- Choose 2 as PAPER --')
         print(' -- Choose 3 as SCISSORS --')
-        print(' - Choose 4 to view high scores - ')
         print(' - Choose q to Quit -' )
         print('')
 
@@ -62,7 +58,7 @@ def getinput():
         pchoice = input(' Enter a choice: \n')
 
         # End game if player chooses q to quit
-        if (pchoice.lower() == 'q'):
+        if (pchoice == 'q'):
             print(' -- End of game! -- \n')
             break
 
@@ -70,12 +66,12 @@ def getinput():
         # Validation to ensure player choice is 1, 2, or 3
         # Display error message if choice invalid
         if (pchoice.isdigit()):
-            if (int(pchoice) < 1 or int(pchoice) > 4):
-                print(' - ERROR! Choose a number between 1 and 4! - \n')
+            if (int(pchoice) < 1 or int(pchoice) > 3):
+                print(' - ERROR! Choose a number between 1 and 3! - \n')
             else:
                 break
         else:
-            print(' - ERROR! Choose 1, 2, 3, 4, or q to quit! - \n')
+            print(' - ERROR! Choose 1, 2, 3, or q to quit! - \n')
 
     return pchoice
 
@@ -90,7 +86,7 @@ def getcinput():
 
 # Loop determines whether player or computer wins, or if tie
 def whowon(player, computer):
-    score =0
+
     if player == computer:
         return "TIE!"
 
@@ -112,9 +108,6 @@ def whowon(player, computer):
     elif (player == PAPER and computer == SCISSORS):
         return 'Scissors beats paper! Computer wins!\n'
 
-    if player == SCORES:
-        return score
-
 
 # Show computer's choice
 def showcchoice(cchoice):
@@ -126,29 +119,7 @@ def showcchoice(cchoice):
     if (cchoice == SCISSORS):
         print('Computer chose: SCISSORS!\n')
 
-# Open and append to highscores file
-def highscores(score):
-
-    openhigh = open('highscores.txt', 'a')
-    name = (name)
-    openhigh.write(str(name + score ))
-    openhigh.write(str(score))
-    openhigh.write('\n')
-    openhigh.close()
-    highscores = openhigh.read()
-
-    if (pchoice == SCORES):
-        openhigh = open(highscores.txt, 'r')
-        highscores = openhigh.read()
-        print(highscores)
-        openhigh.close()
-
-    elif (pchoice == SCORES):
-        print ('Press any key to exit')
-        ex = input ("")
-        os._exit(0)
-
-# Return to main function
-main()
+if __name__ == '__main__':
+    main()
 
 
