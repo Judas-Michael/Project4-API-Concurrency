@@ -37,5 +37,5 @@ Git
 ## Authors
 
 * **Julie Chiu** - *Collaborator* - [jhchiu1](https://github.com/jhchiu1)
-* **Judas Lane** - *Collaborator* - [lyellick](https://github.com/Judas-Michael)
-* **Heather Amo** - *Collaborator* - [jhchiu1](https://github.com/HeatherDa)
+* **Judas Lane** - *Collaborator* - [Judas-Michael](https://github.com/Judas-Michael)
+* **Heather Amo** - *Collaborator* - [HeatherDa](https://github.com/HeatherDa)
