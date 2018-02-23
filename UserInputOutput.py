@@ -4,12 +4,16 @@ import weatherapi
 
 def user_input():
 	input = True
-	while (input == True):
-		search_string = input("Please enter a location (city, country)")
-		if " " not in search_string: #simple validation. Checks for space
-		input = True
+	while (input_state == True):
+		answer = input("Are you searching in the US?")
+		if answer == "Y" || answer == "Yes" || answer =="yes" || answer == "y": #accounts for state names
+			search_string = input("Please enter a location (city, state)") + " USA"
 		else:
-		input = False
+			search_string = input("Please enter a location (city, country)")
+		if " " not in search_string: #simple validation. Checks for space
+			input_state = True
+		else:
+			input_state = False
 		
 def results_print():
 	
