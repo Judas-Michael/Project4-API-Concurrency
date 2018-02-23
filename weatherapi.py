@@ -12,6 +12,8 @@ parsed_json = json.loads(json_string)
 # Get key data pairs
 location = parsed_json['location']['city'] #takes parts of library and assigns to value
 temp_f = parsed_json['current_observation']['temp_f']
+Logger.info(This combines information to make it easier to read, *args, **kwargs)¶
+
 
 # Print temperature based on city location
 print ("Current temperature in %s is: %s" % (location, temp_f))

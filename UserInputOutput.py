@@ -8,6 +8,7 @@ def user_input():
 		answer = input("Are you searching in the US?")
 		if answer == "Y" || answer == "Yes" || answer =="yes" || answer == "y": #accounts for state names
 			search_string = input("Please enter a location (city, state)") + " USA"
+			Logger.info(You're searching in the US, *args, **kwargs)¶
 		else:
 			search_string = input("Please enter a location (city, country)")
 		if " " not in search_string: #simple validation. Checks for space
@@ -16,4 +17,6 @@ def user_input():
 			input_state = False
 		
 def results_print():
+
+
 	

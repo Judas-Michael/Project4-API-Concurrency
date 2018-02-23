@@ -32,6 +32,7 @@ def youtube_search(options):
         if search_result['id']['kind'] == 'youtube#video': # Searches only if it is a youtube video 
             videos.append([search_result['snippet']['title'], "https://www.youtube.com/embed/" + str(search_result['id']['videoId'])]) #edits videos
     return (videos)
+	Logger.info(Videos returned, *args, **kwargs) #info logger to tell you this has been successful
 
 
 
@@ -42,3 +43,4 @@ if __name__ == '__main__':
         print(videos) # Prints search
     except Exception as e: 
         print(e) # Alerts if exception exists
+		Logger.warning(Exception Occured, *args, **kwargs) #warning logger
